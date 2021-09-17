@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Опрос о благоустройстве дворов</title>
+</head>
+<body>
+<div id="main" style="background: #9acded; border-radius: 10px; height: 130%;">
+<div id="heading" style="margin-bottom: 5px;">
+<h1 style="text-align: center; padding-top: 3%; color: Black">Опрос о благоустройстве Вашего двора</h1>
+</div>
+<div id="survey" style="background: #e37895; border-radius: 15px; margin-left: 20%; margin-right: 20%; height:85%;">
+<div id="post-heading" style="text-align: center; margin: 3%;"><h3 style="padding-top: 2%;">Расскажите нам о том, что Вам нравится и не нравится в своём дворе</h3></div>
+<form id="input_form" style="margin: 10px 20%;font-size: 1.2em; padding: 10px;">
+Фамилия:
+<input type="text" placeholder="Введите фамилию" name="FirstName" id="name" style="margin-bottom: 4px; margin-left: 195px;">
+<br>
+Имя:
+<input type="text" placeholder="Введите имя" name="LastName" id="name" style="margin-bottom: 4px; margin-left: 234px;">
+<br>
+Отчество (при наличии):
+<input type="text" placeholder="Введите отчество" name="Patronymic" id="name" style="margin-bottom: 4px; margin-left: 71px;">
+<br>
+<label for="mail">Email: <span style="color: Black"></span></label>
+<input type="text" placeholder="Введите почту" name="mail" id="mail" style="margin-bottom: 4px; margin-left: 224px;">
+<br>
+<label for="fave">Район, в котором Вы проживаете: <span style="color: Black"></span></label>
+<input type="text" placeholder="Название района" name="region" id="region" style="margin-bottom: 22px;">
+<br>
+<label for="time">Как вы оцениваете благоустройство двора Вашего дома?<span style="color: Black"></span></label>
+<br>
+<div id="opinion" style="margin-bottom: 22px; margin-top: 7px">
+<span><input type="radio" name="number">Положительно</span>
+<br>
+<span><input type="radio" name="number">Скорее положительно, чем отрицательно</span>
+<br>
+<span><input type="radio" name="number">Скорее отрицательно, чем положительно</span>
+<br>
+<span><input type="radio" name="number">Отрицательно</span>
+<br>
+<span><input type="radio" name="number">Затрудняюсь ответить</span>
+</div>
+<label for="changes">Как изменилось состояние Вашего двора за последнее время? <span style="color: Black"></span></label>
+<br>
+<select name="changes" id="changes" style="margin-bottom: 22px;">
+<option>Улучшилось</option>
+<option>Осталось прежним</option>
+<option>Ухудшилось</option>
+</select>
+<br>
+<label for="checkbox">Какие плюсы Вашего двора вы можете выделить?<span style="color: Black"></span></label>
+<br>
+<div id="checkbox" style="margin-bottom: 22px; margin-top: 1px">
+<span><input type="checkbox" name="number">Во дворе нет/мало машин</span>
+<br>
+<span><input type="checkbox" name="number">Комфортно находиться на территории</span>
+<br>
+<span><input type="checkbox" name="number">Защищён от неприятной погоды</span>
+<br>
+<span><input type="checkbox" name="number">Хорошо архитектурно спланирован</span>
+<br>
+<span><input type="checkbox" name="number">Безопасен от преступности</span>
+<br>
+</div>
+<textarea placeholder="Что бы Вы хотели улучшить в своём дворе?" name="message" id="message" style="margin-bottom: 15px; height: 75px; width: 75%"></textarea>
+<br>
+<div id="send_button" style="text-align: center">
+<button style="border-radius: 3px; padding: 5px 10px; font-size: 1em; cursor: pointer;">
+Отправить
+</button>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
