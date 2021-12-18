@@ -125,6 +125,51 @@ console.log(new Vector(1, 2).plus(new Vector(2, 3)));
 console.log(new Vector(1, 2).minus(new Vector(2, 3)));
 console.log(new Vector(3, 4).length);
 
+//Задание 13
+function StretchCell(inner, width, height) {
+    this.inner = inner;
+    this.width = width;
+    this.height = height;
+}
+function repeat(string, mult) {
+    let newStr = "";
+    for (let i = 0; i < mult; ++i)
+        newStr += string;
+    return newStr;
+}
+function TextCell(text) {
+    this.text = text.split("\n");
+}
+TextCell.prototype.minWidth = function() {
+    return this.text.reduce(function(width, row) {
+        return Math.max(width, row.length);
+    }, 0);
+};
+TextCell.prototype.minHeight = function() {
+    return this.text.length;
+};
+TextCell.prototype.draw = function(width, height) {
+    let newStr = [];
+    for (let i = 0; i < height; ++i) {
+        let row = this.text[i] || "";
+        newStr.push(row + repeat(" ", width - row.length));
+    }
+    return newStr;
+};
+StretchCell.prototype.minWidth = function() {
+    return Math.max(this.width, this.inner.minWidth());
+};
+StretchCell.prototype.minHeight = function() {
+    return Math.max(this.height, this.inner.minHeight());
+};
+StretchCell.prototype.draw = function(width, height) {
+    return this.inner.draw(width, height);
+}
+let sc = new StretchCell(new TextCell("abc"), 1, 2);
+console.log(sc.minWidth());
+console.log(sc.minHeight());
+console.log(sc.draw(3, 2));
+
 //Задание 14
 function logFive(array) {
     for (var i = 0; i < 5; i++) {
