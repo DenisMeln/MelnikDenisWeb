@@ -1,6 +1,5 @@
 alert("Добро пожаловать в игру Виселица")
 let word = prompt("Введите слово:");
-
 let wordLowercase= [];
     for (let i = 0; i < word.length; i++) {
         wordLowercase[i] = " _ ";
@@ -20,7 +19,6 @@ let lettersNumber = word.length;
 let guessedLetters = wordLowercase;
 let numberOfAttempts = 7;
 alert("Слово состоит из " + lettersNumber + " букв, у Вас есть " + numberOfAttempts + " попыток\n" + wordLowercase.join(" "));
-
 while ((numberOfAttempts !== 0) && (lettersNumber > 0)) {
     let guess = prompt("Введите букву:").toLowerCase();
     if (guess === null) {
